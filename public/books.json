@@ -1,0 +1,20 @@
+[
+  {
+    "type": "epub",
+    "books": [
+      {
+        "text": "你要如何衡量你的人生",
+        "dir": "/books/epub/你要如何衡量你的人生.epub"
+      }
+    ]
+  },
+  {
+    "type": "pdf",
+    "books": [
+      {
+        "text": "思考，快与慢",
+        "dir": "/books/pdf/思考，快与慢.pdf"
+      }
+    ]
+  }
+]
