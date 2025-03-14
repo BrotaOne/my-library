@@ -1,0 +1,52 @@
+[
+    {
+        "category": "000",
+        "description": "计算机、人工智能、编程、百科全书",
+        "text": "计算机、信息、百科"
+    },
+    {
+        "category": "100",
+        "description": "哲学、心理学、自我提升",
+        "text": "哲学与心理学"
+    },
+    {
+        "category": "200",
+        "description": "宗教、神学、灵修",
+        "text": "宗教"
+    },
+    {
+        "category": "300",
+        "description": "政治、法律、经济、社会学",
+        "text": "社会科学"
+    },
+    {
+        "category": "400",
+        "description": "语言学、外语学习、写作",
+        "text": "语言"
+    },
+    {
+        "category": "500",
+        "description": "数学、物理、化学、生物、地球科学",
+        "text": "自然科学"
+    },
+    {
+        "category": "600",
+        "description": "医学、健康、农业、工程、商业",
+        "text": "应用科学"
+    },
+    {
+        "category": "700",
+        "description": "电影、摄影、音乐、绘画、设计",
+        "text": "艺术"
+    },
+    {
+        "category": "800",
+        "description": "小说、诗歌、戏剧、散文",
+        "text": "文学"
+    },
+    {
+        "category": "900",
+        "description": "中国史、世界史、地理、文化",
+        "text": "历史与地理"
+    }
+]

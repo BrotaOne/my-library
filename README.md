@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+这是个人使用的图书库
 
-## Getting Started
+## 怎么用
+可以在线看，或者下载本地看
 
-First, run the development server:
+## 更新
+现在还是测试版
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 其他
+### 图书分类方法
+简化版的《杜威十进制分类法》（DDC），用0-9 的大类编号
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| 编号 | 类别         | 适用书籍示例                                   |
+|------|--------------|--------------------------------------------|
+| 000  | 计算机、信息、百科 | 计算机、人工智能、编程、百科全书             |
+| 100  | 哲学与心理学   | 哲学、心理学、自我提升                       |
+| 200  | 宗教         | 宗教、神学、灵修                             |
+| 300  | 社会科学     | 政治、法律、经济、社会学                     |
+| 400  | 语言         | 语言学、外语学习、写作                       |
+| 500  | 自然科学     | 数学、物理、化学、生物、地球科学             |
+| 600  | 应用科学     | 医学、健康、农业、工程、商业                 |
+| 700  | 艺术         | 电影、摄影、音乐、绘画、设计                 |
+| 800  | 文学         | 小说、诗歌、戏剧、散文                       |
+| 900  | 历史与地理   | 中国史、世界史、地理、文化                   |

@@ -20,13 +20,12 @@ const PDFReader: FC<Props> = ({Header}) => {
     const pdfCtx = useRef<CanvasRenderingContext2D | null>(null)
     const pdfDoc = useRef<PDFJS.PDFDocumentProxy>(null)
     const [pdfNumPages, setPdfNumPages] = useState(1)
-    const isMounted = useRef(false)
+    const lastBookRef = useRef<string>(undefined)
   
     // 依次渲染所有页面
     const renderPage = (num: number) => {
-        console.log('renderPage: ', num)
         pdfDoc.current!.getPage(num).then(page => {
-            const viewport = page.getViewport({ scale: 3 })
+            const viewport = page.getViewport({ scale: 2 })
             pdfContainer.current!.width = viewport.width
             pdfContainer.current!.height = viewport.height
   
@@ -44,15 +43,14 @@ const PDFReader: FC<Props> = ({Header}) => {
     }
 
     useEffect(() => {
-        if (isMounted.current) {
+        if (lastBookRef.current && lastBookRef.current === fileUrl) {
             return
         }
-
+        lastBookRef.current = fileUrl;
         if (pdfDoc.current) {
             pdfDoc.current.cleanup()
             pdfDoc.current.destroy();
         }
-        isMounted.current = true
         pdfCtx.current = pdfContainer.current!.getContext('2d')
   
         PDFJS.getDocument(fileUrl).promise.then(pdfDoc_ => {
@@ -66,16 +64,16 @@ const PDFReader: FC<Props> = ({Header}) => {
                 pdfDoc.current.cleanup()
                 pdfDoc.current.destroy();
                 pdfDoc.current = null
-                isMounted.current = false
+                lastBookRef.current = undefined
             }
         }
     }, [fileUrl])
   
     return (
-        <div>
+        <div className="w-full">
             <Header max={pdfNumPages} onChange={renderPage} />
-            <div className={'flex items-center justify-center rounded-lg flex-col'}>
-                <canvas ref={pdfContainer}></canvas>
+            <div className={'flex items-center justify-center rounded-lg flex-col w-full'}>
+                <canvas ref={pdfContainer} className="w-full" />
             </div>
             
         </div>
