@@ -1,6 +1,7 @@
 "use client";
 
 import { FC } from "react";
+import { Tooltip } from 'antd';
 import { useCurBooksCxt } from "./curBooksCxt";
 
 interface Props {
@@ -17,10 +18,12 @@ const SiderBookItem: FC<Props> = ({text, dir, type}) => {
     }
 
     return (
-        <a onClick={onClick}>
-            {text}
-        </a>
-    )
+        <Tooltip title={text}>
+            <a onClick={onClick}>
+                {text}
+            </a>
+        </Tooltip>
+    );
 }
 
 export default SiderBookItem;
