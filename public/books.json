@@ -9,6 +9,22 @@
         "dir": "/books/000/book-riscv-rev4.pdf"
       },
       {
+        "text": "人月神话(40周年中文纪念版) (〔美〕弗雷德里克·布鲁克斯著；汪颖译) (Z-Library)",
+        "dir": "/books/000/人月神话(40周年中文纪念版) (〔美〕弗雷德里克·布鲁克斯著；汪颖译) (Z-Library).pdf"
+      },
+      {
+        "text": "代码整洁之道clean code",
+        "dir": "/books/000/代码整洁之道clean code.pdf"
+      },
+      {
+        "text": "搞定系统设计：面试敲开大厂的门 - Xu_2023",
+        "dir": "/books/000/搞定系统设计：面试敲开大厂的门 - Xu_2023.pdf"
+      },
+      {
+        "text": "程序员的README (克里斯·里科米尼 德米特里·里) (Z-Library)",
+        "dir": "/books/000/程序员的README (克里斯·里科米尼 德米特里·里) (Z-Library).pdf"
+      },
+      {
         "text": "算法.第4版",
         "dir": "/books/000/算法.第4版.pdf"
       },
@@ -28,12 +44,32 @@
     "description": "哲学、心理学、自我提升",
     "books": [
       {
+        "text": "Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library)",
+        "dir": "/books/100/Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library).epub"
+      },
+      {
         "text": "Thinking Fast and Slow by Daniel Kahneman",
         "dir": "/books/100/Thinking Fast and Slow by Daniel Kahneman.pdf"
       },
       {
+        "text": "《5%的改变》李松蔚",
+        "dir": "/books/100/《5%的改变》李松蔚.epub"
+      },
+      {
+        "text": "一个人的老后 ([日] 上野千鹤子 译者 杨明绮)",
+        "dir": "/books/100/一个人的老后 ([日] 上野千鹤子 译者 杨明绮).pdf"
+      },
+      {
         "text": "你要如何衡量你的人生",
         "dir": "/books/100/你要如何衡量你的人生.epub"
+      },
+      {
+        "text": "关键对话",
+        "dir": "/books/100/关键对话.pdf"
+      },
+      {
+        "text": "尼尔•波兹曼 - 娱乐至死-中信出版股份有限公司 (2015)",
+        "dir": "/books/100/尼尔•波兹曼 - 娱乐至死-中信出版股份有限公司 (2015).azw3"
       },
       {
         "text": "思考，快与慢",
@@ -42,6 +78,10 @@
       {
         "text": "有限与无限的游戏-詹姆斯·卡斯",
         "dir": "/books/100/有限与无限的游戏-詹姆斯·卡斯.epub"
+      },
+      {
+        "text": "沟通的艺术",
+        "dir": "/books/100/沟通的艺术.pdf"
       },
       {
         "text": "终身成长：重新定义成功的思维模式 - 卡罗尔·德韦克(美)",
@@ -67,6 +107,14 @@
         "dir": "/books/300/中国文化的深层结构.epub"
       },
       {
+        "text": "乌合之众：大众心理研究（精装插图纪念版）",
+        "dir": "/books/300/乌合之众：大众心理研究（精装插图纪念版）.epub"
+      },
+      {
+        "text": "全球化陷阱对民主和福利的进攻",
+        "dir": "/books/300/全球化陷阱对民主和福利的进攻.epub"
+      },
+      {
         "text": "兰小欢 - 置身事内 _ 中国政府与经济发展-上海人民出版社 (2021)",
         "dir": "/books/300/兰小欢 - 置身事内 _ 中国政府与经济发展-上海人民出版社 (2021).pdf"
       },
@@ -79,8 +127,47 @@
         "dir": "/books/300/商君書錐指 (蔣禮鴻) (z-lib.org).pdf"
       },
       {
+        "text": "如何阅读一本书(转化版)(有目录) ([美] 莫提默·J. 艾德勒  查尔斯·范多伦) (Z-Library)",
+        "dir": "/books/300/如何阅读一本书(转化版)(有目录) ([美] 莫提默·J. 艾德勒  查尔斯·范多伦) (Z-Library).pdf"
+      },
+      {
+        "text": "如何阅读一本书",
+        "dir": "/books/300/如何阅读一本书.pdf"
+      },
+      {
+        "text": "弗里德里希·哈耶克：通往奴役之路",
+        "dir": "/books/300/弗里德里希·哈耶克：通往奴役之路.pdf"
+      },
+      {
+        "text": "红色赌盘 - by Shum East",
+        "dir": "/books/300/红色赌盘 - by Shum East.pdf"
+      },
+      {
+        "text": "财富自由之路 - 李笑来 - epub",
+        "dir": "/books/300/财富自由之路 - 李笑来 - epub.epub"
+      },
+      {
+        "text": "财富自由之路 - 李笑来 - pdf",
+        "dir": "/books/300/财富自由之路 - 李笑来 - pdf.pdf"
+      },
+      {
         "text": "通往财富自由之路",
         "dir": "/books/300/通往财富自由之路.epub"
+      }
+    ]
+  },
+  {
+    "type": "400",
+    "text": "语言",
+    "description": "语言学、外语学习、写作",
+    "books": [
+      {
+        "text": "English-Conversation-Premium",
+        "dir": "/books/400/English-Conversation-Premium.pdf"
+      },
+      {
+        "text": "程序员的英语_14394403",
+        "dir": "/books/400/程序员的英语_14394403.pdf"
       }
     ]
   },
@@ -89,6 +176,10 @@
     "text": "文学",
     "description": "小说、诗歌、戏剧、散文",
     "books": [
+      {
+        "text": "[意] 达里奥·福 - 一个无政府主义者的意外死亡-上海译文出版社 (2016)",
+        "dir": "/books/800/[意] 达里奥·福 - 一个无政府主义者的意外死亡-上海译文出版社 (2016).mobi"
+      },
       {
         "text": "写作只能塑造真实的自己",
         "dir": "/books/800/写作只能塑造真实的自己.pdf"
@@ -100,6 +191,10 @@
       {
         "text": "远山淡影 [英] 石黑一雄 ",
         "dir": "/books/800/远山淡影 [英] 石黑一雄 .epub"
+      },
+      {
+        "text": "遥远的救世主",
+        "dir": "/books/800/遥远的救世主.epub"
       }
     ]
   },

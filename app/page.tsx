@@ -3,7 +3,8 @@ import { Menu } from 'antd';
 import path from 'path';
 import { CurBooksCxtProvider } from './curBooksCxt';
 import SiderBookItem from './siderBookItem';
-import ShowBook from './showBook';
+import ShowBook from './Read/showBook';
+import Search from './search';
 
 type BookCategory = Array<{
   type: 'string';
@@ -39,10 +40,11 @@ export default async function Home() {
   return (
     <CurBooksCxtProvider >
       <div className="flex w-screen h-screen flex-col">
-        <header className="w-screen h-[60px] border-b border-b-gray-300 flex items-center pl-5">
+        <header className="w-screen flex-shrink-0 h-[60px] border-b border-b-gray-300 flex items-center pl-5 justify-between">
           Brota 的书架
+          <Search bookCategory={bookCategory} />
         </header>
-        <div className="flex w-screen h-screen p-5">
+        <div className="flex w-screen p-5">
           <aside className="w-[200px]">
             <div>books</div>
             <Menu items={items} mode="inline" />
