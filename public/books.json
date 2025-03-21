@@ -5,6 +5,10 @@
     "description": "计算机、人工智能、编程、百科全书",
     "books": [
       {
+        "text": "Vue.js设计与实现 (霍春阳) (Z-Library)",
+        "dir": "/books/000/Vue.js设计与实现 (霍春阳) (Z-Library).pdf"
+      },
+      {
         "text": "book-riscv-rev4",
         "dir": "/books/000/book-riscv-rev4.pdf"
       },
@@ -15,6 +19,10 @@
       {
         "text": "代码整洁之道clean code",
         "dir": "/books/000/代码整洁之道clean code.pdf"
+      },
+      {
+        "text": "修改软件的艺术 构建易维护代码的9条最佳实践 ([美] David Scott Bernstein) (Z-Library)",
+        "dir": "/books/000/修改软件的艺术 构建易维护代码的9条最佳实践 ([美] David Scott Bernstein) (Z-Library).pdf"
       },
       {
         "text": "搞定系统设计：面试敲开大厂的门 - Xu_2023",
@@ -46,6 +54,10 @@
       {
         "text": "Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library)",
         "dir": "/books/100/Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library).epub"
+      },
+      {
+        "text": "From Bacteria to Bach and Back The Evolution of Minds (Daniel Clement Dennett) (Z-Library)",
+        "dir": "/books/100/From Bacteria to Bach and Back The Evolution of Minds (Daniel Clement Dennett) (Z-Library).epub"
       },
       {
         "text": "Thinking Fast and Slow by Daniel Kahneman",
