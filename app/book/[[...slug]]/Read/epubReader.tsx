@@ -2,7 +2,7 @@
 
 import { FC, useState } from 'react';
 import { ReactReader } from 'react-reader'
-import { useCurBooksCxt } from '../curBooksCxt';
+import { useParams } from 'next/navigation';
 
 interface Props {
     Header: FC<{
@@ -12,7 +12,8 @@ interface Props {
 }
 
 const EpubReader: FC<Props> = ({Header}) => {
-    const { state: { dir: fileUrl } } = useCurBooksCxt();
+    const { slug = [] } = useParams<{ slug: string[] }>()
+    const fileUrl = '/' +  slug.map(v=> decodeURI(v)).join('/')
     
     const [location, setLocation] = useState<string | number>(0)
     const pdfNumPages = 100

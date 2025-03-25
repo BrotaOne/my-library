@@ -1,8 +1,8 @@
 "use client"
 
 import { Select } from "antd";
-import { FC, useCallback, useMemo, useState } from "react";
-import { useCurBooksCxt } from "./curBooksCxt";
+import { useRouter } from "next/navigation";
+import { FC, useMemo, useState } from "react";
 
 type BookCategory = Array<{
     type: 'string';
@@ -15,7 +15,10 @@ type BookCategory = Array<{
   
 
 const Search: FC<{ bookCategory: BookCategory }> = ({ bookCategory }) => {
-    const { openBook } = useCurBooksCxt();
+    const router = useRouter()
+    const openBook = (dir: string) => {
+        router.push(`/book/${dir}`)
+    }
     const [category, setCategory] = useState<string>();
 
     const categories = bookCategory.map(v => ({
@@ -51,13 +54,6 @@ const Search: FC<{ bookCategory: BookCategory }> = ({ bookCategory }) => {
         }, [category, bookCategory]
     );
 
-    const onBookChange = useCallback(
-        (_: string, v?: { dir: string; text: string; type: string } | { dir: string; text: string; type: string }[]) => {
-            if (v && !Array.isArray(v))
-                openBook(v)
-        }, [openBook]
-    );
-
     return (
         <div className="flex gap-5 pr-5">
             <Select
@@ -68,7 +64,7 @@ const Search: FC<{ bookCategory: BookCategory }> = ({ bookCategory }) => {
             <Select
                 options={books}
                 className="w-50"
-                onChange={onBookChange}
+                onChange={openBook}
             />
         </div>
     )

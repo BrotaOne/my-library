@@ -1,13 +1,21 @@
 "use client";
 
 import { FC, useCallback, useEffect, useRef, useState } from "react";
-import { useCurBooksCxt } from "../curBooksCxt";
 import PDFReader from "./pdfReader";
 import { Select } from "antd";
 import EpubReader from "./epubReader";
+import { useParams, useRouter } from "next/navigation";
 
-const Header: FC<{ max: number, onChange: (v: number)=> void }> = ({ max, onChange: onChangeIn }) => {
-    const { state: { text, dir }, closeBook } = useCurBooksCxt();
+const Header: FC<{ max: number, onChange: (v: number) => void }> = ({ max, onChange: onChangeIn }) => {
+    const router = useRouter()
+    const { slug = [] } = useParams<{ slug: string[] }>()
+    const [, , dir] = slug?.map(v=> decodeURI(v));
+    const text = dir?.split('.')?.[0]
+    const closeBook = () => {
+        router.push('/book')
+    }
+    const fileUrl = '/' +  slug.map(v=> decodeURI(v)).join('/')
+    
     const [pageNo, setPageNo] = useState(1);
     const maxRef = useRef(1)
 
@@ -75,7 +83,7 @@ const Header: FC<{ max: number, onChange: (v: number)=> void }> = ({ max, onChan
     return (
         <div className="flex justify-center gap-10">
             <div> {text}</div>
-            <a href={`${dir}`} target="_blank">下载文件</a>
+            <a href={fileUrl} target="_blank">下载文件</a>
             <div onClick={closeBook}>关闭文件</div>
             {showJumpPage ? (
                 <Select
@@ -91,14 +99,18 @@ const Header: FC<{ max: number, onChange: (v: number)=> void }> = ({ max, onChan
 };
 
 const ShowBook = () => {
-    const { state: { text, dir } } = useCurBooksCxt();
-
-    if (!text || !dir) {
+    // const slug = await params;
+    // console.log('slug: ', slug)
+    const {slug = []} = useParams()
+    // const { state: { text, dir } } = useCurBooksCxt();
+    const [, , dir] = slug;
+    const text = dir?.split('.')?.[0]
+    if (!dir) {
         return <div>还未选择文件</div>
     }
 
     const fileType = dir.split('.').pop()
-
+console.log('fileType: ', fileType)
     return (
         <div>
             {fileType === 'pdf' ? <PDFReader Header={Header} /> : <></>}

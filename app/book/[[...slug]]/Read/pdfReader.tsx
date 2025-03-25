@@ -1,8 +1,8 @@
 "use client";
 
 import { FC, useEffect, useRef, useState } from "react";
-import { useCurBooksCxt } from "../curBooksCxt";
 import * as PDFJS from 'pdfjs-dist'
+import { useParams } from "next/navigation";
 
 PDFJS.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${PDFJS.version}/build/pdf.worker.min.mjs`
 
@@ -14,8 +14,9 @@ interface Props {
 }
 
 const PDFReader: FC<Props> = ({Header}) => {
-    const { state: { dir: fileUrl } } = useCurBooksCxt();
-
+    const { slug = [] } = useParams<{ slug: string[] }>()
+    const fileUrl = '/' + slug.map(v => decodeURI(v)).join('/')
+    
     const pdfContainer = useRef<HTMLCanvasElement>(null)
     const pdfCtx = useRef<CanvasRenderingContext2D | null>(null)
     const pdfDoc = useRef<PDFJS.PDFDocumentProxy>(null)
