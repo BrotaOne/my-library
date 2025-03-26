@@ -52,6 +52,10 @@
     "description": "哲学、心理学、自我提升",
     "books": [
       {
+        "text": "5%的改变 - 李松蔚",
+        "dir": "/books/100/5%的改变 - 李松蔚.epub"
+      },
+      {
         "text": "Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library)",
         "dir": "/books/100/Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library).epub"
       },
@@ -62,10 +66,6 @@
       {
         "text": "Thinking Fast and Slow by Daniel Kahneman",
         "dir": "/books/100/Thinking Fast and Slow by Daniel Kahneman.pdf"
-      },
-      {
-        "text": "《5%的改变》李松蔚",
-        "dir": "/books/100/《5%的改变》李松蔚.epub"
       },
       {
         "text": "一个人的老后 ([日] 上野千鹤子 译者 杨明绮)",

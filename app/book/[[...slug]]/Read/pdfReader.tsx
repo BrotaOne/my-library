@@ -14,7 +14,7 @@ interface Props {
 }
 
 const PDFReader: FC<Props> = ({Header}) => {
-    const { slug = [] } = useParams<{ slug: string[] }>()
+    const { slug = [] } = useParams<{ slug?: string[] }>()
     const fileUrl = '/' + slug.map(v => decodeURI(v)).join('/')
     
     const pdfContainer = useRef<HTMLCanvasElement>(null)

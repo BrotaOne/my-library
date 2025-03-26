@@ -1,71 +1,43 @@
 "use client"
 
-import { Select } from "antd";
-import { useRouter } from "next/navigation";
-import { FC, useMemo, useState } from "react";
+import { FC } from "react";
+import { Cascader } from "antd";
+import { useParams, useRouter } from "next/navigation";
 
 type BookCategory = Array<{
-    type: 'string';
-    text: 'string'
+    type: string;
+    text: string;
     books: Array<{
       text: string;
       dir: string;
     }>
-  }>
-  
+}>
 
 const Search: FC<{ bookCategory: BookCategory }> = ({ bookCategory }) => {
     const router = useRouter()
-    const openBook = (dir: string) => {
+    const openBook = (value: string[]) => {
+        const dir = value[1];
+        if(dir)
         router.push(`/book/${dir}`)
     }
-    const [category, setCategory] = useState<string>();
 
-    const categories = bookCategory.map(v => ({
-        label: v.text,
-        value: v.type,
-    }))
+    const { slug = [] } = useParams<{ slug?: string[] }>()
+    const [, type, dir] = slug?.map(v => decodeURI(v));
 
-    const books = useMemo(
-        () => {
-            const books: Array<{
-                label: string,
-                value: string,
-                type: string,
-                dir: string,
-                text: string
-            }> = []
-
-            bookCategory.forEach(v => {
-                if (category && v.type !== category) {
-                    return
-                }
-                v.books.forEach(vv => {
-                    books.push({
-                        ...vv,
-                        label: vv.text,
-                        value: vv.dir,
-                        type: v.type,
-                    })
-                })
-            })
-
-            return books;
-        }, [category, bookCategory]
-    );
+    const options = bookCategory.map(v => {
+        return {
+            value: v.type,
+            label: v.text,
+            children: v.books.map(vv => ({
+                value: vv.dir,
+                label: vv.text
+            }))
+        }
+    })
 
     return (
         <div className="flex gap-5 pr-5">
-            <Select
-                options={categories}
-                className="w-50"
-                onChange={setCategory}
-            />
-            <Select
-                options={books}
-                className="w-50"
-                onChange={openBook}
-            />
+            <Cascader options={options} onChange={openBook} style={{ width: '30rem' }} value={[type, dir]} />
         </div>
     )
 }

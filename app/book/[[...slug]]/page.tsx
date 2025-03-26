@@ -23,11 +23,9 @@ const getBookCategory: () => BookCategory = () => {
 };
 
 
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ slug: string[] }>
-  }) {
+export default async function Home({params}: {
+  params: Promise<{ slug?: string[] }>
+}) {
   const { slug  = []} = await params;
   const bookCategory = getBookCategory();
   const items = bookCategory.map(v => {
@@ -60,7 +58,7 @@ export default async function Home({
           />
         </aside>
         <main className="flex-1">
-          <ShowBook />
+          <ShowBook params={params} />
         </main>
       </div>
     </div>

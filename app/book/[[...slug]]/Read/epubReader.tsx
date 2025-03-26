@@ -12,7 +12,7 @@ interface Props {
 }
 
 const EpubReader: FC<Props> = ({Header}) => {
-    const { slug = [] } = useParams<{ slug: string[] }>()
+    const { slug = [] } = useParams<{ slug?: string[] }>()
     const fileUrl = '/' +  slug.map(v=> decodeURI(v)).join('/')
     
     const [location, setLocation] = useState<string | number>(0)
