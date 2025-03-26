@@ -10,7 +10,7 @@ interface Props {
 const SiderBookItem: FC<Props> = ({text, dir}) => { 
     return (
         <Tooltip title={text}>
-            <Link href={`/book/${dir}`}>{text}</Link>
+            <Link href={`/book${dir}`}>{text}</Link>
         </Tooltip>
     );
 }

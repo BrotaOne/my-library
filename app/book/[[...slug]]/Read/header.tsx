@@ -20,8 +20,8 @@ const Header = ({ max, onChange: onChangeIn, }: {
     const fileUrl = '/' +  slug.map(v=> decodeURI(v)).join('/')
     
     return (
-        <div className="flex justify-center gap-10">
-            <div> {text}</div>
+        <div className="flex justify-center min-sm:gap-10 max-sm:gap-2">
+            <div className="max-sm:hidden">{text}</div>
             <a href={fileUrl} target="_blank">下载文件</a>
             <div onClick={closeBook}>关闭文件</div>
             <PageChange max={max} onChange={onChangeIn} />

@@ -36,9 +36,13 @@ const Search: FC<{ bookCategory: BookCategory }> = ({ bookCategory }) => {
     })
 
     return (
-        <div className="flex gap-5 pr-5">
-            <Cascader options={options} onChange={openBook} style={{ width: '30rem' }} value={[type, dir]} />
-        </div>
+        <Cascader
+            options={options}
+            onChange={openBook}
+            className="max-w-3/5 min-sm:hidden! mr-2!"
+            value={[type, dir]}
+            popupClassName="max-w-4/5"
+        />
     )
 }
 

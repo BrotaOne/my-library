@@ -5,16 +5,16 @@
     "description": "计算机、人工智能、编程、百科全书",
     "books": [
       {
-        "text": "Vue.js设计与实现 (霍春阳) (Z-Library)",
-        "dir": "/books/000/Vue.js设计与实现 (霍春阳) (Z-Library).pdf"
+        "text": "Vue.js设计与实现 - 霍春阳",
+        "dir": "/books/000/Vue.js设计与实现 - 霍春阳.pdf"
       },
       {
         "text": "book-riscv-rev4",
         "dir": "/books/000/book-riscv-rev4.pdf"
       },
       {
-        "text": "人月神话(40周年中文纪念版) (〔美〕弗雷德里克·布鲁克斯著；汪颖译) (Z-Library)",
-        "dir": "/books/000/人月神话(40周年中文纪念版) (〔美〕弗雷德里克·布鲁克斯著；汪颖译) (Z-Library).pdf"
+        "text": "人月神话(40周年中文纪念版) (〔美〕弗雷德里克·布鲁克斯著；汪颖译) ",
+        "dir": "/books/000/人月神话(40周年中文纪念版) (〔美〕弗雷德里克·布鲁克斯著；汪颖译) .pdf"
       },
       {
         "text": "代码整洁之道clean code",
@@ -25,12 +25,12 @@
         "dir": "/books/000/修改软件的艺术 构建易维护代码的9条最佳实践 ([美] David Scott Bernstein) (Z-Library).pdf"
       },
       {
-        "text": "搞定系统设计：面试敲开大厂的门 - Xu_2023",
-        "dir": "/books/000/搞定系统设计：面试敲开大厂的门 - Xu_2023.pdf"
+        "text": "搞定系统设计：面试敲开大厂的门 - Xu",
+        "dir": "/books/000/搞定系统设计：面试敲开大厂的门 - Xu.pdf"
       },
       {
-        "text": "程序员的README (克里斯·里科米尼 德米特里·里) (Z-Library)",
-        "dir": "/books/000/程序员的README (克里斯·里科米尼 德米特里·里) (Z-Library).pdf"
+        "text": "程序员的README - 克里斯·里科米尼 德米特里·里",
+        "dir": "/books/000/程序员的README - 克里斯·里科米尼 德米特里·里.pdf"
       },
       {
         "text": "算法.第4版",
@@ -51,10 +51,6 @@
     "text": "哲学与心理学",
     "description": "哲学、心理学、自我提升",
     "books": [
-      {
-        "text": "5%的改变 - 李松蔚",
-        "dir": "/books/100/5%的改变 - 李松蔚.epub"
-      },
       {
         "text": "Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library)",
         "dir": "/books/100/Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library).epub"
@@ -94,6 +90,10 @@
       {
         "text": "沟通的艺术",
         "dir": "/books/100/沟通的艺术.pdf"
+      },
+      {
+        "text": "百分之5的改变 - 李松蔚",
+        "dir": "/books/100/百分之5的改变 - 李松蔚.epub"
       },
       {
         "text": "终身成长：重新定义成功的思维模式 - 卡罗尔·德韦克(美)",
