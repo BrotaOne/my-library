@@ -1,37 +1,36 @@
-"use client"
+'use client'
 
-import { FC } from "react";
-import { Cascader } from "antd";
-import { useParams, useRouter } from "next/navigation";
+import {FC} from 'react'
+import {Cascader} from 'antd'
+import {useParams, useRouter} from 'next/navigation'
 
 type BookCategory = Array<{
-    type: string;
-    text: string;
+    type: string
+    text: string
     books: Array<{
-      text: string;
-      dir: string;
+        text: string
+        dir: string
     }>
 }>
 
-const Search: FC<{ bookCategory: BookCategory }> = ({ bookCategory }) => {
+const Search: FC<{bookCategory: BookCategory}> = ({bookCategory}) => {
     const router = useRouter()
     const openBook = (value: string[]) => {
-        const dir = value[1];
-        if(dir)
-        router.push(`/book/${dir}`)
+        const dir = value[1]
+        if (dir) router.push(`/book/${dir}`)
     }
 
-    const { slug = [] } = useParams<{ slug?: string[] }>()
-    const [, type, dir] = slug?.map(v => decodeURI(v));
+    const {slug = []} = useParams<{slug?: string[]}>()
+    const [, type, dir] = slug?.map((v) => decodeURI(v))
 
-    const options = bookCategory.map(v => {
+    const options = bookCategory.map((v) => {
         return {
             value: v.type,
             label: v.text,
-            children: v.books.map(vv => ({
+            children: v.books.map((vv) => ({
                 value: vv.dir,
-                label: vv.text
-            }))
+                label: vv.text,
+            })),
         }
     })
 

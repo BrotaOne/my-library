@@ -1,89 +1,108 @@
-"use client";
+'use client'
 
-import { FC, useCallback, useEffect, useRef, useState } from "react";
-import { Select } from "antd";
-import { useParams } from "next/navigation";
+import {useEffect, useRef, useState} from 'react'
+import {Select} from 'antd'
+import {useParams} from 'next/navigation'
 
-const PageChange: FC<{ max: number, onChange: (v: number) => void }> = ({ max, onChange: onChangeIn })=> {
-    const { slug = [] } = useParams<{ slug?: string[] }>()
-    const [, , dir] = slug?.map(v=> decodeURI(v));
-    
-    const [pageNo, setPageNo] = useState(1);
+interface Props {
+    max: number
+    onChange: (v: number) => void
+}
+
+const useListenPreNext = (skip: boolean, jump: (v: number) => void) => {
+    useEffect(() => {
+        if (!skip) {
+            return
+        }
+
+        const changePage = (event: KeyboardEvent) => {
+            const diff =
+                event.code === 'ArrowRight'
+                    ? 1
+                    : event.code === 'ArrowLeft'
+                      ? -1
+                      : 0
+            if (diff === 0) {
+                return
+            }
+
+            jump(diff)
+        }
+
+        document.addEventListener('keyup', changePage, false)
+
+        return () => {
+            document.removeEventListener('keyup', changePage)
+        }
+    }, [jump, skip])
+
+    useEffect(() => {
+        if (!skip) {
+            return
+        }
+
+        const fn = (e: MouseEvent) => {
+            const {clientX} = e
+            const width = window.innerWidth
+
+            if (clientX > (width / 3) * 2) {
+                jump(1)
+            } else if (clientX < width / 3) {
+                jump(-1)
+            }
+        }
+
+        document.addEventListener('click', fn)
+
+        return () => document.removeEventListener('click', fn)
+    }, [jump, skip])
+}
+
+const PageChange = ({max, onChange: onChangeIn}: Props) => {
+    const {slug = []} = useParams<{slug?: string[]}>()
+    const [, , dir] = slug?.map((v) => decodeURI(v))
+
+    const [pageNo, setPageNo] = useState(1)
     const maxRef = useRef(1)
 
-    const options = Array(max).fill(0).map((_, idx) => idx + 1).map(v => ({ value: v, label: v }));
-    const showJumpPage = dir && dir?.split('.')?.pop() === 'pdf';
-    
-    useEffect(
-        () => {
-            maxRef.current = max
-        }, [max]
-    )
+    const options = Array(max)
+        .fill(0)
+        .map((_, idx) => idx + 1)
+        .map((v) => ({value: v, label: v}))
+    const showJumpPage = dir && dir?.split('.')?.pop() === 'pdf'
 
-    const jumpPage = useCallback(
-        (diff: 1 | -1) => {
-            setPageNo(v => {
-                const vv = v + diff;
-                if (vv < 1) {
-                    return 1
-                }
-                if (vv > maxRef.current) {
-                    return max
-                }
-                return vv;
-            });
-        }, [max]
-    )
+    useEffect(() => {
+        maxRef.current = max
+    }, [max])
 
-    useEffect(
-        () => {
-            try {
-                onChangeIn(pageNo);
-            } catch (e: unknown) {
-                console.error(String(e));
-            }
-        }, [pageNo, onChangeIn]
-    )
+    const onChange = (v: number) => {
+        if (v > maxRef.current || v < 1) {
+            return
+        }
 
-    useEffect(
-        () => {
-            if (!showJumpPage) {
-                return 
-            }
-            const changePage = (event: KeyboardEvent) => { 
-                const diff = event.code === "ArrowRight"
-                    ? 1
-                    : event.code === "ArrowLeft"
-                        ? -1
-                        : 0;
-                if (diff === 0) {
-                    return
-                }
+        try {
+            onChangeIn(v)
+            setPageNo(v)
+        } catch (e: unknown) {
+            console.error(String(e))
+        }
+    }
 
-                jumpPage(diff)
-            }
+    useListenPreNext(!!showJumpPage, (diff) => onChange(pageNo + diff))
 
-            document.addEventListener('keyup', changePage, false)
-
-            return () => {
-                document.removeEventListener('keyup', changePage)
-            }
-        },
-        [jumpPage, showJumpPage]
-    )
-
-    if (!showJumpPage)
+    if (!showJumpPage) {
         return <></>
-    
+    }
+
     return (
         <Select
             showSearch
             value={pageNo}
             options={options}
-            onChange={setPageNo}
+            onChange={onChange}
             className="w-[200px]"
         />
     )
 }
 
-export default PageChange;
+export default PageChange
