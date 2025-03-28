@@ -25,6 +25,11 @@ const Outline = ({items, jump}: Props) => {
 
     useEffect(() => {
         const fn = (e: MouseEvent) => {
+            const target = e.target as HTMLElement
+            if (target?.nodeName !== 'CANVAS') {
+                return
+            }
+
             if (visible) {
                 toggle()
             } else {
@@ -48,7 +53,7 @@ const Outline = ({items, jump}: Props) => {
     return (
         <div>
             <PauseOutlined
-                className="absolute top-30 rotate-90"
+                className="absolute top-30 rotate-90 min-sm:text-4xl min-sm:left-60"
                 onClick={toggle}
             />
             <Menu

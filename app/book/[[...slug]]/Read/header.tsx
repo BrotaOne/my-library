@@ -23,7 +23,7 @@ const Header = ({
     const fileUrl = '/' + slug.map((v) => decodeURI(v)).join('/')
 
     return (
-        <div className="flex justify-center min-sm:gap-10 max-sm:gap-2 items-center mb-2">
+        <div className="flex justify-center min-sm:gap-x-10 min-sm:gap-y-1 max-sm:gap-x-2 max-sm:gap-y-1 items-center mb-2 mt-2 flex-wrap">
             <div className="max-sm:hidden">{text}</div>
             <a href={fileUrl} target="_blank">
                 下载文件

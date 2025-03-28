@@ -48,9 +48,8 @@ export default async function Home({
                 Brota 的书架
                 <Search bookCategory={bookCategory} />
             </header>
-            <div className="flex max-w-full min-md:p-5 max-md:p-2">
+            <div className="flex max-w-full max-md:p-2">
                 <aside className="w-[200px] max-sm:hidden">
-                    <div>books</div>
                     <Menu
                         items={items}
                         mode="inline"
