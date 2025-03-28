@@ -2,6 +2,7 @@ import type {Metadata} from 'next'
 import {Geist, Geist_Mono} from 'next/font/google'
 import {AntdRegistry} from '@ant-design/nextjs-registry'
 import './globals.css'
+import ThemeContextProvider from './themes'
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -24,11 +25,13 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <AntdRegistry>{children}</AntdRegistry>
+                <ThemeContextProvider>
+                    <AntdRegistry>{children}</AntdRegistry>
+                </ThemeContextProvider>
             </body>
         </html>
     )
