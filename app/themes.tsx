@@ -1,35 +1,34 @@
 'use client'
 
-import {ThemeProvider} from 'next-themes'
 import {ConfigProvider, theme as antdTheme} from 'antd'
-import {cloneElement, ReactElement, ReactNode} from 'react'
-
-const AntdProvider = ({children}: {children: ReactNode}) => {
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const algorithm = isDark
-        ? antdTheme.darkAlgorithm
-        : antdTheme.defaultAlgorithm
-    return (
-        <ConfigProvider
-            theme={{
-                algorithm,
-            }}
-        >
-            {cloneElement(children as ReactElement)}
-        </ConfigProvider>
-    )
-}
+import {cloneElement, ReactElement, ReactNode, useEffect, useState} from 'react'
 
 export default function ThemeContextProvider({
     children,
 }: {
     children: ReactNode
 }) {
+    const [isDark, setIsDark] = useState<boolean>()
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+        setIsDark(mediaQuery.matches)
+
+        const handleChange = (event: MediaQueryListEvent) => {
+            setIsDark(event.matches)
+        }
+
+        mediaQuery.addEventListener('change', handleChange)
+        return () => mediaQuery.removeEventListener('change', handleChange)
+    }, [])
+
+    const algorithm = isDark
+        ? antdTheme.darkAlgorithm
+        : antdTheme.defaultAlgorithm
+
     return (
-        <ThemeProvider>
-            <AntdProvider>
-                {cloneElement(children as ReactElement)}
-            </AntdProvider>
-        </ThemeProvider>
+        <ConfigProvider theme={{algorithm}}>
+            {cloneElement(children as ReactElement)}
+        </ConfigProvider>
     )
 }
