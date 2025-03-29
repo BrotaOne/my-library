@@ -72,7 +72,6 @@ const PDFReader: FC<Props> = ({Header}) => {
             //   })
         })
     }
-    console.log('outline: ', outline)
 
     useEffect(() => {
         if (lastBookRef.current && lastBookRef.current === fileUrl) {

@@ -40,7 +40,7 @@ const useListenPreNext = (skip: boolean, jump: (v: number) => void) => {
         if (!skip) {
             return
         }
-        const fn = (e: PointerEvent) => {
+        const fn = (e: MouseEvent) => {
             const target = e.target as HTMLElement
             if (target?.nodeName !== 'CANVAS') {
                 return
