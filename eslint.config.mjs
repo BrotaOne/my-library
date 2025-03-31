@@ -14,8 +14,13 @@ const eslintConfig = [
     "next/core-web-vitals",
     "next/typescript",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
   ),
+  ...compat.config({
+    rules: {
+      'no-console': ['error', { allow: ['error', 'warn'] }],
+    }
+  })
 ];
 
 export default eslintConfig;

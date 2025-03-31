@@ -4,6 +4,7 @@ import path from 'path'
 import SiderBookItem from './siderBookItem'
 import ShowBook from './Read/showBook'
 import Search from './search'
+import Theme from './theme'
 
 type BookCategory = Array<{
     type: 'string'
@@ -46,6 +47,7 @@ export default async function Home({
         <div className="flex max-w-screen max-h-screen flex-col">
             <header className="max-w-full flex-shrink-0 h-[60px] border-b border-b-gray-300 flex items-center pl-5 justify-between">
                 Brota 的书架
+                <Theme />
                 <Search bookCategory={bookCategory} />
             </header>
             <div className="flex max-w-full max-md:p-2">

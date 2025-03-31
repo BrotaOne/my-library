@@ -5,7 +5,8 @@ import {useParams} from 'next/navigation'
 import {FC, useEffect, useRef, useState} from 'react'
 import Outline from './outline'
 
-PDFJS.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${PDFJS.version}/build/pdf.worker.min.mjs`
+// PDFJS.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${PDFJS.version}/build/pdf.worker.min.mjs`
+PDFJS.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
 
 interface Props {
     Header: FC<{
