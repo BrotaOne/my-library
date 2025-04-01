@@ -1,9 +1,10 @@
 'use client'
 
 import * as PDFJS from 'pdfjs-dist'
-import {useParams} from 'next/navigation'
 import {FC, useEffect, useRef, useState} from 'react'
+import {useParams} from 'next/navigation'
 import Outline from './outline'
+import handleSlug from '@/components/handleSlug'
 
 // PDFJS.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${PDFJS.version}/build/pdf.worker.min.mjs`
 PDFJS.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
@@ -46,7 +47,7 @@ const getOutline = async (pdfDoc: PDFJS.PDFDocumentProxy) => {
 
 const PDFReader: FC<Props> = ({Header}) => {
     const {slug = []} = useParams<{slug?: string[]}>()
-    const fileUrl = '/' + slug.map((v) => decodeURI(v)).join('/')
+    const {fileUrl} = handleSlug(slug)
 
     const pdfContainer = useRef<HTMLCanvasElement>(null)
     const pdfCtx = useRef<CanvasRenderingContext2D | null>(null)

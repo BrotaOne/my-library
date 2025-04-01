@@ -6,42 +6,52 @@
     "books": [
       {
         "text": "Vue.js设计与实现 - 霍春阳",
+        "hasMind": "0",
         "dir": "/books/000/Vue.js设计与实现 - 霍春阳.pdf"
       },
       {
         "text": "book-riscv-rev4",
+        "hasMind": "1",
         "dir": "/books/000/book-riscv-rev4.pdf"
       },
       {
-        "text": "人月神话(40周年中文纪念版) (〔美〕弗雷德里克·布鲁克斯著；汪颖译) ",
-        "dir": "/books/000/人月神话(40周年中文纪念版) (〔美〕弗雷德里克·布鲁克斯著；汪颖译) .pdf"
+        "text": "人月神话 - 弗雷德里克·布鲁克斯著 汪颖译 ",
+        "hasMind": "0",
+        "dir": "/books/000/人月神话 - 弗雷德里克·布鲁克斯著 汪颖译 .pdf"
       },
       {
         "text": "代码整洁之道clean code",
+        "hasMind": "0",
         "dir": "/books/000/代码整洁之道clean code.pdf"
       },
       {
-        "text": "修改软件的艺术 构建易维护代码的9条最佳实践 ([美] David Scott Bernstein) (Z-Library)",
-        "dir": "/books/000/修改软件的艺术 构建易维护代码的9条最佳实践 ([美] David Scott Bernstein) (Z-Library).pdf"
+        "text": "修改软件的艺术 构建易维护代码的9条最佳实践 - David Scott Bernstein",
+        "hasMind": "0",
+        "dir": "/books/000/修改软件的艺术 构建易维护代码的9条最佳实践 - David Scott Bernstein.pdf"
       },
       {
         "text": "搞定系统设计：面试敲开大厂的门 - Xu",
+        "hasMind": "0",
         "dir": "/books/000/搞定系统设计：面试敲开大厂的门 - Xu.pdf"
       },
       {
         "text": "程序员的README - 克里斯·里科米尼 德米特里·里",
+        "hasMind": "0",
         "dir": "/books/000/程序员的README - 克里斯·里科米尼 德米特里·里.pdf"
       },
       {
         "text": "算法.第4版",
+        "hasMind": "0",
         "dir": "/books/000/算法.第4版.pdf"
       },
       {
         "text": "软技能：代码之外的生存指南 - John Sonmez",
+        "hasMind": "0",
         "dir": "/books/000/软技能：代码之外的生存指南 - John Sonmez.epub"
       },
       {
         "text": "阅读是一座随身携带的避难所：毛姆读书随笔 - 威廉·毛姆(英)",
+        "hasMind": "0",
         "dir": "/books/000/阅读是一座随身携带的避难所：毛姆读书随笔 - 威廉·毛姆(英).epub"
       }
     ]
@@ -53,58 +63,92 @@
     "books": [
       {
         "text": "Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library)",
+        "hasMind": "0",
         "dir": "/books/100/Crucial Conversations Tools for Talking When Stakes are High, 3rd Edition ( etc.) (Z-Library).epub"
       },
       {
         "text": "From Bacteria to Bach and Back The Evolution of Minds (Daniel Clement Dennett) (Z-Library)",
+        "hasMind": "0",
         "dir": "/books/100/From Bacteria to Bach and Back The Evolution of Minds (Daniel Clement Dennett) (Z-Library).epub"
       },
       {
         "text": "Thinking Fast and Slow by Daniel Kahneman",
+        "hasMind": "0",
         "dir": "/books/100/Thinking Fast and Slow by Daniel Kahneman.pdf"
       },
       {
         "text": "一个人的老后 ([日] 上野千鹤子 译者 杨明绮)",
+        "hasMind": "0",
         "dir": "/books/100/一个人的老后 ([日] 上野千鹤子 译者 杨明绮).pdf"
       },
       {
+        "text": "伯恩斯新情绪疗法Ⅲ - [美]戴维·伯恩斯 ",
+        "hasMind": "0",
+        "dir": "/books/100/伯恩斯新情绪疗法Ⅲ - [美]戴维·伯恩斯 .pdf"
+      },
+      {
         "text": "你要如何衡量你的人生",
+        "hasMind": "0",
         "dir": "/books/100/你要如何衡量你的人生.epub"
       },
       {
         "text": "关键对话",
+        "hasMind": "0",
         "dir": "/books/100/关键对话.pdf"
       },
       {
-        "text": "尼尔•波兹曼 - 娱乐至死-中信出版股份有限公司 (2015)",
-        "dir": "/books/100/尼尔•波兹曼 - 娱乐至死-中信出版股份有限公司 (2015).azw3"
+        "text": "娱乐至死 - 尼尔·波兹曼",
+        "hasMind": "0",
+        "dir": "/books/100/娱乐至死 - 尼尔·波兹曼.epub"
+      },
+      {
+        "text": "当下的力量 - Eckhart Tolle 埃克哈特·托利 ",
+        "hasMind": "0",
+        "dir": "/books/100/当下的力量 - Eckhart Tolle 埃克哈特·托利 .epub"
       },
       {
         "text": "思考，快与慢",
+        "hasMind": "0",
         "dir": "/books/100/思考，快与慢.pdf"
       },
       {
         "text": "有限与无限的游戏-詹姆斯·卡斯",
+        "hasMind": "0",
         "dir": "/books/100/有限与无限的游戏-詹姆斯·卡斯.epub"
       },
       {
+        "text": "正念禅修 - 马克·威廉姆斯，丹尼·彭曼 ",
+        "hasMind": "0",
+        "dir": "/books/100/正念禅修 - 马克·威廉姆斯，丹尼·彭曼 .epub"
+      },
+      {
         "text": "沟通的艺术",
+        "hasMind": "0",
         "dir": "/books/100/沟通的艺术.pdf"
       },
       {
         "text": "百分之5的改变 - 李松蔚",
+        "hasMind": "0",
         "dir": "/books/100/百分之5的改变 - 李松蔚.epub"
       },
       {
         "text": "终身成长：重新定义成功的思维模式 - 卡罗尔·德韦克(美)",
+        "hasMind": "0",
         "dir": "/books/100/终身成长：重新定义成功的思维模式 - 卡罗尔·德韦克(美).epub"
       },
       {
         "text": "能力陷阱",
+        "hasMind": "0",
         "dir": "/books/100/能力陷阱.pdf"
       },
       {
+        "text": "自我关怀的力量 - 克里斯廷·内夫 Kristin Neff",
+        "hasMind": "0",
+        "dir": "/books/100/自我关怀的力量 - 克里斯廷·内夫 Kristin Neff.epub"
+      },
+      {
         "text": "走出唯一真理观 - 陈嘉映 - -上海文艺出版社 (2020)",
+        "hasMind": "0",
         "dir": "/books/100/走出唯一真理观 - 陈嘉映 - -上海文艺出版社 (2020).pdf"
       }
     ]
@@ -116,62 +160,77 @@
     "books": [
       {
         "text": "中国文化的深层结构",
+        "hasMind": "0",
         "dir": "/books/300/中国文化的深层结构.epub"
       },
       {
-        "text": "乌合之众：大众心理研究（精装插图纪念版）",
-        "dir": "/books/300/乌合之众：大众心理研究（精装插图纪念版）.epub"
+        "text": "乌合之众：大众心理研究",
+        "hasMind": "0",
+        "dir": "/books/300/乌合之众：大众心理研究.epub"
       },
       {
-        "text": "亲密关系（十周年纪念版） (罗兰·米勒,Rowland S. Miller) (Z-Library)",
-        "dir": "/books/300/亲密关系（十周年纪念版） (罗兰·米勒,Rowland S. Miller) (Z-Library).epub"
+        "text": "亲密关系 -  罗兰·米勒 Rowland S. Miller",
+        "hasMind": "0",
+        "dir": "/books/300/亲密关系 -  罗兰·米勒 Rowland S. Miller.epub"
       },
       {
         "text": "全球化陷阱对民主和福利的进攻",
+        "hasMind": "0",
         "dir": "/books/300/全球化陷阱对民主和福利的进攻.epub"
       },
       {
         "text": "兰小欢 - 置身事内 _ 中国政府与经济发展-上海人民出版社 (2021)",
+        "hasMind": "0",
         "dir": "/books/300/兰小欢 - 置身事内 _ 中国政府与经济发展-上海人民出版社 (2021).pdf"
       },
       {
         "text": "商君书--石磊译注",
+        "hasMind": "0",
         "dir": "/books/300/商君书--石磊译注.pdf"
       },
       {
-        "text": "商君書錐指 (蔣禮鴻) (z-lib.org)",
-        "dir": "/books/300/商君書錐指 (蔣禮鴻) (z-lib.org).pdf"
+        "text": "商君書錐指 - 蔣禮鴻",
+        "hasMind": "0",
+        "dir": "/books/300/商君書錐指 - 蔣禮鴻.pdf"
       },
       {
-        "text": "如何阅读一本书(转化版)(有目录) ([美] 莫提默·J. 艾德勒  查尔斯·范多伦) (Z-Library)",
-        "dir": "/books/300/如何阅读一本书(转化版)(有目录) ([美] 莫提默·J. 艾德勒  查尔斯·范多伦) (Z-Library).pdf"
+        "text": "如何阅读一本书 - 莫提默·J. 艾德勒  查尔斯·范多伦",
+        "hasMind": "0",
+        "dir": "/books/300/如何阅读一本书 - 莫提默·J. 艾德勒  查尔斯·范多伦.pdf"
       },
       {
         "text": "如何阅读一本书",
+        "hasMind": "0",
         "dir": "/books/300/如何阅读一本书.pdf"
       },
       {
         "text": "弗里德里希·哈耶克：通往奴役之路",
+        "hasMind": "0",
         "dir": "/books/300/弗里德里希·哈耶克：通往奴役之路.pdf"
       },
       {
         "text": "心理学与生活 (格里格, Richard J. Gerrig) (Z-Library)",
+        "hasMind": "0",
         "dir": "/books/300/心理学与生活 (格里格, Richard J. Gerrig) (Z-Library).epub"
       },
       {
         "text": "社会心理学 (戴维·迈尔斯) (Z-Library)",
+        "hasMind": "0",
         "dir": "/books/300/社会心理学 (戴维·迈尔斯) (Z-Library).epub"
       },
       {
         "text": "财富自由之路 - 李笑来 - epub",
+        "hasMind": "0",
         "dir": "/books/300/财富自由之路 - 李笑来 - epub.epub"
       },
       {
         "text": "财富自由之路 - 李笑来 - pdf",
+        "hasMind": "0",
         "dir": "/books/300/财富自由之路 - 李笑来 - pdf.pdf"
       },
       {
         "text": "通往财富自由之路",
+        "hasMind": "0",
         "dir": "/books/300/通往财富自由之路.epub"
       }
     ]
@@ -183,10 +242,12 @@
     "books": [
       {
         "text": "English-Conversation-Premium",
+        "hasMind": "0",
         "dir": "/books/400/English-Conversation-Premium.pdf"
       },
       {
         "text": "程序员的英语_14394403",
+        "hasMind": "0",
         "dir": "/books/400/程序员的英语_14394403.pdf"
       }
     ]
@@ -197,23 +258,28 @@
     "description": "小说、诗歌、戏剧、散文",
     "books": [
       {
-        "text": "[意] 达里奥·福 - 一个无政府主义者的意外死亡-上海译文出版社 (2016)",
-        "dir": "/books/800/[意] 达里奥·福 - 一个无政府主义者的意外死亡-上海译文出版社 (2016).mobi"
+        "text": "一个无政府主义者的意外死亡 - 达里奥•福",
+        "hasMind": "0",
+        "dir": "/books/800/一个无政府主义者的意外死亡 - 达里奥•福.epub"
       },
       {
         "text": "写作只能塑造真实的自己",
+        "hasMind": "0",
         "dir": "/books/800/写作只能塑造真实的自己.pdf"
       },
       {
         "text": "狂人日记",
+        "hasMind": "0",
         "dir": "/books/800/狂人日记.epub"
       },
       {
         "text": "远山淡影 [英] 石黑一雄 ",
+        "hasMind": "0",
         "dir": "/books/800/远山淡影 [英] 石黑一雄 .epub"
       },
       {
         "text": "遥远的救世主",
+        "hasMind": "0",
         "dir": "/books/800/遥远的救世主.epub"
       }
     ]
@@ -225,6 +291,7 @@
     "books": [
       {
         "text": "吴思 - 隐蔽的秩序_拆解历史弈局(修正版)-海南出版社 (2004)",
+        "hasMind": "0",
         "dir": "/books/900/吴思 - 隐蔽的秩序_拆解历史弈局(修正版)-海南出版社 (2004).epub"
       }
     ]

@@ -27,9 +27,58 @@
 
 > 介绍下这几本书，并且根据简化版的《杜威十进制分类法》（DDC），用0-9 的大类编号给这些书分类
 
+## 思维导图
+
+格式可以参考下面这个
+
+```json
+const initialNodes = [
+    {
+        id: '1',
+        position: {x: 0, y: 150},
+        data: {label: 'base style 1'},
+    },
+    {
+        id: '2',
+        position: {x: 250, y: 0},
+        data: {label: 'base style 2'},
+        // ...nodeDefaults,
+    },
+    {
+        id: '3',
+        position: {x: 250, y: 150},
+        data: {label: 'base style 3'},
+    },
+    {
+        id: '4',
+        position: {x: 250, y: 300},
+        data: {label: 'base style 4'},
+    },
+]
+
+const initialEdges = [
+    {
+        id: 'e1-2',
+        source: '1',
+        target: '2',
+    },
+    {
+        id: 'e1-3',
+        source: '1',
+        target: '3',
+    },
+    {
+        id: 'e1-4',
+        source: '1',
+        target: '4',
+    },
+]
+```
+
 ## 待更新
 估计很慢了
 
+- [] 思维导图阅读
 - [] 电子书要能流式加载，并且支持下载
 - [] 增加收藏
 - [x] 移动端、黑白主题适配

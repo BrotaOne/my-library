@@ -5,6 +5,7 @@ import {useTheme} from 'next-themes'
 import {useParams} from 'next/navigation'
 import {FC, useRef, useState} from 'react'
 import {IReactReaderStyle, ReactReader, ReactReaderStyle} from 'react-reader'
+import handleSlug from '@/components/handleSlug'
 
 interface Props {
     Header: FC<{
@@ -78,8 +79,7 @@ const darkReaderTheme: IReactReaderStyle = {
 
 const EpubReader: FC<Props> = ({Header}) => {
     const {slug = []} = useParams<{slug?: string[]}>()
-    const fileUrl = '/' + slug.map((v) => decodeURI(v)).join('/')
-    const title = decodeURI(slug?.[slug.length - 1]?.split('.')?.[0])
+    const {title, fileUrl} = handleSlug(slug)
 
     const [location, setLocation] = useState<string | number>(0)
     const pdfNumPages = 100

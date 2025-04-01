@@ -4,7 +4,8 @@ import path from 'path'
 import SiderBookItem from './siderBookItem'
 import ShowBook from './Read/showBook'
 import Search from './search'
-import Theme from './theme'
+import Theme from '@/components/theme'
+import handleSlug from '@/components/handleSlug'
 
 type BookCategory = Array<{
     type: 'string'
@@ -12,6 +13,7 @@ type BookCategory = Array<{
     books: Array<{
         text: string
         dir: string
+        hasMind: string
     }>
 }>
 
@@ -36,11 +38,17 @@ export default async function Home({
             label: v.text,
             children: v.books.map((vv) => ({
                 key: vv.dir,
-                label: <SiderBookItem text={vv.text} dir={vv.dir} />,
+                label: (
+                    <SiderBookItem
+                        text={vv.text}
+                        dir={vv.dir}
+                        hasMind={vv.hasMind}
+                    />
+                ),
             })),
         }
     })
-    const [base, type, fileName] = slug?.map((v) => decodeURI(v))
+    const {base, type, fileName} = handleSlug(slug)
     const defaultSelectedKeys = [type, `/${base}/${type}/${fileName}`]
 
     return (

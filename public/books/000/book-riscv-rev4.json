@@ -1,0 +1,95 @@
+{
+    "title": "走出唯一真理观 - 陈嘉映",
+    "nodes": [
+        {
+            "id": "1",
+            "label": "走出唯一真理观",
+            "color": "#000000",
+            "shape": "roundRect",
+            "children": [
+                {
+                    "id": "2",
+                    "label": "引言",
+                    "color": "#3498db",
+                    "children": []
+                },
+                {
+                    "id": "3",
+                    "label": "真理观的多样性",
+                    "color": "#2ecc71",
+                    "children": [
+                        {
+                            "id": "4",
+                            "label": "绝对真理观的批判",
+                            "color": "#e74c3c",
+                            "children": []
+                        },
+                        {
+                            "id": "5",
+                            "label": "相对真理观的探讨",
+                            "color": "#9b59b6",
+                            "children": []
+                        },
+                        {
+                            "id": "6",
+                            "label": "实用主义真理观的提出",
+                            "color": "#34495e",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "id": "7",
+                    "label": "真理与语言的关系",
+                    "color": "#e67e22",
+                    "children": [
+                        {
+                            "id": "8",
+                            "label": "语言作为真理的载体",
+                            "color": "#1abc9c",
+                            "children": []
+                        },
+                        {
+                            "id": "9",
+                            "label": "语言与真理的局限性",
+                            "color": "#f1c40f",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "id": "10",
+                    "label": "结论与启示",
+                    "color": "#d35400",
+                    "children": [
+                        {
+                            "id": "11",
+                            "label": "真理观的多元性",
+                            "color": "#2980b9",
+                            "children": []
+                        },
+                        {
+                            "id": "12",
+                            "label": "对现代科学真理观的反思",
+                            "color": "#8e44ad",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "edges": [
+        {"from": "1", "to": "2"},
+        {"from": "1", "to": "3"},
+        {"from": "3", "to": "4"},
+        {"from": "3", "to": "5"},
+        {"from": "3", "to": "6"},
+        {"from": "1", "to": "7"},
+        {"from": "7", "to": "8"},
+        {"from": "7", "to": "9"},
+        {"from": "1", "to": "10"},
+        {"from": "10", "to": "11"},
+        {"from": "10", "to": "12"}
+    ]
+}

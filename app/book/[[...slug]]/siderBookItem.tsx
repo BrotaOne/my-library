@@ -5,12 +5,13 @@ import Link from 'next/link'
 interface Props {
     dir: string
     text: string
+    hasMind: string
 }
 
-const SiderBookItem: FC<Props> = ({text, dir}) => {
+const SiderBookItem: FC<Props> = ({text, dir, hasMind = '0'}) => {
     return (
         <Tooltip title={text}>
-            <Link href={`/book${dir}`}>{text}</Link>
+            <Link href={`/book${dir}?hasMind=${hasMind}`}>{text}</Link>
         </Tooltip>
     )
 }

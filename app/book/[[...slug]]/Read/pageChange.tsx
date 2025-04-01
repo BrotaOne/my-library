@@ -1,8 +1,9 @@
 'use client'
 
-import {useEffect, useRef, useState} from 'react'
 import {Select} from 'antd'
+import {useEffect, useRef, useState} from 'react'
 import {useParams} from 'next/navigation'
+import handleSlug from '@/components/handleSlug'
 
 interface Props {
     max: number
@@ -63,7 +64,7 @@ const useListenPreNext = (skip: boolean, jump: (v: number) => void) => {
 
 const PageChange = ({max, onChange: onChangeIn}: Props) => {
     const {slug = []} = useParams<{slug?: string[]}>()
-    const [, , dir] = slug?.map((v) => decodeURI(v))
+    const {fileType} = handleSlug(slug)
 
     const [pageNo, setPageNo] = useState(1)
     const maxRef = useRef(1)
@@ -72,7 +73,7 @@ const PageChange = ({max, onChange: onChangeIn}: Props) => {
         .fill(0)
         .map((_, idx) => idx + 1)
         .map((v) => ({value: v, label: v}))
-    const showJumpPage = dir && dir?.split('.')?.pop() === 'pdf'
+    const showJumpPage = fileType === 'pdf'
 
     useEffect(() => {
         maxRef.current = max
