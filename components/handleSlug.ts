@@ -5,7 +5,7 @@ export default function handleSlug(slugRaw: string[]) {
     const [base, type, fileName] = slug
     const fileNames = fileName?.split('.')
     const fileType = fileNames?.pop()
-    const title = fileNames.join('.')
+    const title = fileNames?.join('.') || ''
     const jsonUrl = fileType && fileUrl.replace(fileType, 'json')
 
     return {

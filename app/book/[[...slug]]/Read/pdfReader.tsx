@@ -5,6 +5,7 @@ import {FC, useEffect, useRef, useState} from 'react'
 import {useParams} from 'next/navigation'
 import Outline from './outline'
 import handleSlug from '@/components/handleSlug'
+import {useTheme} from 'next-themes'
 
 // PDFJS.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${PDFJS.version}/build/pdf.worker.min.mjs`
 PDFJS.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
@@ -117,15 +118,14 @@ const PDFReader: FC<Props> = ({Header}) => {
             // pdfDoc.current?.getPage(target.num)
         }
     }
+    const {resolvedTheme} = useTheme()
+    const className = `flex items-center justify-center rounded-lg flex-col w-full 
+    ${resolvedTheme === 'dark' ? ' invert-[1]' : ''}`
 
     return (
         <div className="w-full">
             <Header max={pdfNumPages} onChange={renderPage} />
-            <div
-                className={
-                    'flex items-center justify-center rounded-lg flex-col w-full'
-                }
-            >
+            <div className={className}>
                 <canvas ref={pdfContainer} className="w-full" />
             </div>
 
