@@ -6,6 +6,7 @@ import ShowBook from './Read/showBook'
 import Search from './search'
 import Theme from '@/components/theme'
 import handleSlug from '@/components/handleSlug'
+import Link from 'next/link'
 
 type BookCategory = Array<{
     type: 'string'
@@ -54,7 +55,7 @@ export default async function Home({
     return (
         <div className="flex max-w-screen max-h-screen flex-col">
             <header className="max-w-full flex-shrink-0 h-[60px] border-b border-b-gray-300 flex items-center pl-5 justify-between">
-                Brota 的书架
+                <Link href="/"> Brota 的书架</Link>
                 <Theme />
                 <Search bookCategory={bookCategory} />
             </header>
