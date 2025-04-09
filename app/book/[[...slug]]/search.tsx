@@ -24,9 +24,9 @@ type OptionType = {
 const Search: FC<{bookCategory: BookCategory}> = ({bookCategory}) => {
     const router = useRouter()
     const openBook = (value: string[], item: OptionType[]) => {
-        const hasMind = !!item?.[1].hasMind
+        const hasMind = item?.[1].hasMind
         const dir = value[1]
-        if (dir) router.push(`/book/${dir}?hasMind=${hasMind}`)
+        if (dir) router.push(`/book${dir}?hasMind=${hasMind}`)
     }
 
     const {slug = []} = useParams<{slug?: string[]}>()
