@@ -1,29 +1,29 @@
 import {test, expect} from '@playwright/test'
 import fs from 'fs'
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({page}) => {
     // 读取文件内容
-    const filePath = './tests/alice.epub';
-    const pdfFilePath = './tests/pdf test.pdf';
-    const fileContent = fs.readFileSync(filePath);
+    const filePath = './tests/e2e/alice.epub'
+    const pdfFilePath = './tests/e2e/pdf test.pdf'
+    const fileContent = fs.readFileSync(filePath)
 
     // 拦截请求并返回文件内容
     await page.route('**/books/**/*.epub', async (route) => {
         await route.fulfill({
-        status: 200,
-        contentType: 'application/epub+zip',
-        body: fileContent,
-        });
-    });
+            status: 200,
+            contentType: 'application/epub+zip',
+            body: fileContent,
+        })
+    })
 
-    const pdfContent = fs.readFileSync(pdfFilePath);
+    const pdfContent = fs.readFileSync(pdfFilePath)
     await page.route('**/books/**/*.pdf', async (route) => {
         await route.fulfill({
-        status: 200,
-        contentType: 'application/pdf',
-        body: pdfContent,
-        });
-    });
+            status: 200,
+            contentType: 'application/pdf',
+            body: pdfContent,
+        })
+    })
 
     await page.goto('http://localhost:3000/')
 
@@ -60,11 +60,11 @@ test('test', async ({page}) => {
         const secondBookName = await secondBook.textContent()
         await secondBook.click()
         await expect(page.getByRole('main')).toContainText(secondBookName!)
-     
+
         await page.waitForLoadState('networkidle')
         const canvasNum = await page.locator('main canvas').count()
         // 直接找iframe会找不到
-        const iframeNum = await page.getByRole('button', { name: '›' }).count()
+        const iframeNum = await page.getByRole('button', {name: '›'}).count()
         await expect(canvasNum + iframeNum).toBe(1)
     }
 

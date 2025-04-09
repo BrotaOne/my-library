@@ -24,7 +24,9 @@ const Theme = () => {
                     <span role="img" aria-label={option.data.label}>
                         {option.data.icon}
                     </span>
-                    {option.data.label}
+                    <span data-testid="test-theme-options">
+                        {option.data.label}
+                    </span>
                 </Space>
             )}
         />
