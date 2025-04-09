@@ -15,6 +15,17 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm install -g pnpm && pnpm install
+    - name: Unit tests
+      run: pnpm vitest
+    - name: Unit tests coverage
+      run: pnpm vitestc
+    - name: Upload Vitest Coverage Report
+      if: ${{ !cancelled() }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: vitest-coverage
+        path: coverage/
+        retention-days: 30
     - name: Install Playwright Browsers
       run: pnpm exec playwright install --with-deps
     - name: Run Playwright tests
