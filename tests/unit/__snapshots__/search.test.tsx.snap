@@ -6,7 +6,7 @@ exports[`search books 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="ant-select ant-cascader ant-select-outlined max-w-3/5 min-sm:hidden! mr-2! css-dev-only-do-not-override-1a3rktk ant-select-single ant-select-allow-clear ant-select-show-arrow"
+        class="ant-select ant-cascader ant-select-outlined max-w-3/5 min-sm:hidden! mr-2! ant-select-single ant-select-allow-clear ant-select-show-arrow"
       >
         <div
           class="ant-select-selector"
@@ -100,7 +100,7 @@ exports[`search books 1`] = `
   </body>,
   "container": <div>
     <div
-      class="ant-select ant-cascader ant-select-outlined max-w-3/5 min-sm:hidden! mr-2! css-dev-only-do-not-override-1a3rktk ant-select-single ant-select-allow-clear ant-select-show-arrow"
+      class="ant-select ant-cascader ant-select-outlined max-w-3/5 min-sm:hidden! mr-2! ant-select-single ant-select-allow-clear ant-select-show-arrow"
     >
       <div
         class="ant-select-selector"
