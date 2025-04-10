@@ -1,7 +1,13 @@
-import {fireEvent, render, within, screen} from '@testing-library/react'
-import {beforeAll, expect, it, vi} from 'vitest'
+import {
+    fireEvent,
+    render,
+    within,
+    screen,
+    cleanup,
+} from '@testing-library/react'
+import {afterAll, beforeAll, afterEach, expect, it, vi} from 'vitest'
 import Search from '@/app/book/[[...slug]]/search'
-import { ConfigProvider } from 'antd'
+import {ConfigProvider} from 'antd'
 
 const testOne = {
     text: 'Vue.js设计与实现 - 霍春阳',
@@ -57,12 +63,21 @@ beforeAll(() => {
     })
 })
 
+afterAll(() => {
+    vi.resetAllMocks()
+    vi.clearAllMocks()
+})
+
+afterEach(() => {
+    cleanup()
+})
+
 it('search books', () => {
     // antd hash 会导致本地和github action的class不一致
     const dom = render(
         <ConfigProvider theme={{hashed: false}}>
             <Search bookCategory={data} />
-        </ConfigProvider>
+        </ConfigProvider>,
     )
     expect(dom).matchSnapshot()
 })
