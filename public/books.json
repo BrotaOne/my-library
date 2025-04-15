@@ -5,6 +5,11 @@
     "description": "计算机、人工智能、编程、百科全书",
     "books": [
       {
+        "text": "JavaScript设计模式与开发实践",
+        "hasMind": "0",
+        "dir": "/books/000/JavaScript设计模式与开发实践.pdf"
+      },
+      {
         "text": "Vue.js设计与实现 - 霍春阳",
         "hasMind": "0",
         "dir": "/books/000/Vue.js设计与实现 - 霍春阳.pdf"
@@ -204,6 +209,11 @@
         "dir": "/books/300/如何阅读一本书.pdf"
       },
       {
+        "text": "小岛经济学鱼、美元和经济的故事 (Peter D. Schiff, Andrew J. Schiff , 胡晓姣, 吕靖纬 etc.) ",
+        "hasMind": "0",
+        "dir": "/books/300/小岛经济学鱼、美元和经济的故事 (Peter D. Schiff, Andrew J. Schiff , 胡晓姣, 吕靖纬 etc.) .epub"
+      },
+      {
         "text": "弗里德里希·哈耶克：通往奴役之路",
         "hasMind": "0",
         "dir": "/books/300/弗里德里希·哈耶克：通往奴役之路.pdf"
@@ -212,6 +222,11 @@
         "text": "心理学与生活 (格里格, Richard J. Gerrig) (Z-Library)",
         "hasMind": "0",
         "dir": "/books/300/心理学与生活 (格里格, Richard J. Gerrig) (Z-Library).epub"
+      },
+      {
+        "text": "牛奶可乐经济学套装（全四册）（“文津图书奖”获奖升级全套！ 通俗经济学入门就读这四本！） (罗伯特·弗兰克 [罗伯特·弗兰克])",
+        "hasMind": "0",
+        "dir": "/books/300/牛奶可乐经济学套装（全四册）（“文津图书奖”获奖升级全套！ 通俗经济学入门就读这四本！） (罗伯特·弗兰克 [罗伯特·弗兰克]).epub"
       },
       {
         "text": "社会心理学 (戴维·迈尔斯) (Z-Library)",
