@@ -10,6 +10,11 @@
         "dir": "/books/000/JavaScript设计模式与开发实践.pdf"
       },
       {
+        "text": "Node.js实战",
+        "hasMind": "0",
+        "dir": "/books/000/Node.js实战.pdf"
+      },
+      {
         "text": "Vue.js设计与实现 - 霍春阳",
         "hasMind": "0",
         "dir": "/books/000/Vue.js设计与实现 - 霍春阳.pdf"
@@ -164,6 +169,11 @@
     "description": "政治、法律、经济、社会学",
     "books": [
       {
+        "text": "21世紀的21堂課 (哈拉瑞 (Yuval Noah Harari) 著  林俊宏 譯)",
+        "hasMind": "0",
+        "dir": "/books/300/21世紀的21堂課 (哈拉瑞 (Yuval Noah Harari) 著  林俊宏 譯).epub"
+      },
+      {
         "text": "中国文化的深层结构",
         "hasMind": "0",
         "dir": "/books/300/中国文化的深层结构.epub"
@@ -177,6 +187,11 @@
         "text": "亲密关系 -  罗兰·米勒 Rowland S. Miller",
         "hasMind": "0",
         "dir": "/books/300/亲密关系 -  罗兰·米勒 Rowland S. Miller.epub"
+      },
+      {
+        "text": "人類叁部曲台版（繁体）（人类简史台版） ([以色列]哈拉瑞；林俊宏 译) ",
+        "hasMind": "0",
+        "dir": "/books/300/人類叁部曲台版（繁体）（人类简史台版） ([以色列]哈拉瑞；林俊宏 译) .epub"
       },
       {
         "text": "全球化陷阱对民主和福利的进攻",
